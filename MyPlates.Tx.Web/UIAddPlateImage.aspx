@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UIAddPlateImage.aspx.cs" Inherits="MyPlates.Tx.Web.UIAddPlateImage" ContentType="text/xml"%>

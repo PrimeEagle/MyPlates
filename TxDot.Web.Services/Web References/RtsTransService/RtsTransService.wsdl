@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns2="http://data.trans.webservices.rts.isd.txdot.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:intf="http://trans.webservices.rts.isd.txdot.com" xmlns:tns3="http://data.common.webservices.rts.isd.txdot.com" xmlns:impl="http://trans.webservices.rts.isd.txdot.com" targetNamespace="http://trans.webservices.rts.isd.txdot.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:intf="http://trans.webservices.rts.isd.txdot.com" elementFormDefault="qualified" targetNamespace="http://data.trans.webservices.rts.isd.txdot.com">
+      <xsd:import namespace="http://data.common.webservices.rts.isd.txdot.com" />
+      <xsd:complexType name="RtsTransRequest">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns3:RtsAbstractRequest">
+            <xsd:sequence>
+              <xsd:element name="addlSetIndi" type="xsd:int" />
+              <xsd:element name="epayRcveTimeStmp" nillable="true" type="xsd:dateTime" />
+              <xsd:element name="epaySendTimeStmp" nillable="true" type="xsd:dateTime" />
+              <xsd:element name="initReqTimeStmp" nillable="true" type="xsd:dateTime" />
+              <xsd:element name="itrntPymntStatusCd" type="xsd:int" />
+              <xsd:element name="itrntTraceNo" nillable="true" type="xsd:string" />
+              <xsd:element name="mfgPltNo" nillable="true" type="xsd:string" />
+              <xsd:element name="orgNo" nillable="true" type="xsd:string" />
+              <xsd:element name="pltCd" nillable="true" type="xsd:string" />
+              <xsd:element name="pltExpMo" type="xsd:int" />
+              <xsd:element name="pltExpYr" type="xsd:int" />
+              <xsd:element name="pltNo" nillable="true" type="xsd:string" />
+              <xsd:element name="pltOwnrAddr" nillable="true" type="tns3:RtsAddress" />
+              <xsd:element name="pltOwnrEmailAddr" nillable="true" type="xsd:string" />
+              <xsd:element name="pltOwnrName1" nillable="true" type="xsd:string" />
+              <xsd:element name="pltOwnrName2" nillable="true" type="xsd:string" />
+              <xsd:element name="pltOwnrPhone" nillable="true" type="xsd:string" />
+              <xsd:element name="pltTerm" type="xsd:int" />
+              <xsd:element name="pymntAmt" type="xsd:double" />
+              <xsd:element name="pymntOrderId" nillable="true" type="xsd:string" />
+              <xsd:element name="resComptCntyNo" type="xsd:int" />
+              <xsd:element name="fromReserve" type="xsd:boolean" />
+              <xsd:element name="isa" type="xsd:boolean" />
+              <xsd:element name="plp" type="xsd:boolean" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="RtsTransResponse">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns3:RtsAbstractResponse">
+            <xsd:sequence />
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:intf="http://trans.webservices.rts.isd.txdot.com" elementFormDefault="qualified" targetNamespace="http://data.common.webservices.rts.isd.txdot.com">
+      <xsd:complexType name="RtsAbstractRequest" abstract="true">
+        <xsd:sequence>
+          <xsd:element name="action" type="xsd:int" />
+          <xsd:element name="caller" nillable="true" type="xsd:string" />
+          <xsd:element name="sessionId" nillable="true" type="xsd:string" />
+          <xsd:element name="versionNo" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="RtsAddress">
+        <xsd:sequence>
+          <xsd:element name="city" nillable="true" type="xsd:string" />
+          <xsd:element name="state" nillable="true" type="xsd:string" />
+          <xsd:element name="streetLine1" nillable="true" type="xsd:string" />
+          <xsd:element name="streetLine2" nillable="true" type="xsd:string" />
+          <xsd:element name="zip" nillable="true" type="xsd:string" />
+          <xsd:element name="zipP4" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="RtsAbstractResponse" abstract="true">
+        <xsd:sequence>
+          <xsd:element name="errMsgDesc" nillable="true" type="xsd:string" />
+          <xsd:element name="errMsgNo" type="xsd:int" />
+          <xsd:element name="versionNo" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:intf="http://trans.webservices.rts.isd.txdot.com" elementFormDefault="qualified" targetNamespace="http://trans.webservices.rts.isd.txdot.com">
+      <xsd:import namespace="http://data.trans.webservices.rts.isd.txdot.com" />
+      <xsd:element name="processData">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="aarrRequest" type="tns2:RtsTransRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="processDataResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="processDataReturn" type="tns2:RtsTransResponse" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="processDataRequest">
+    <wsdl:part name="parameters" element="impl:processData" />
+  </wsdl:message>
+  <wsdl:message name="processDataResponse">
+    <wsdl:part name="parameters" element="impl:processDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="RtsTransService">
+    <wsdl:operation name="processData">
+      <wsdl:input name="processDataRequest" message="impl:processDataRequest" />
+      <wsdl:output name="processDataResponse" message="impl:processDataResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RtsTransServiceSoapBinding" type="impl:RtsTransService">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="processData">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="processDataRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="processDataResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RtsTransServiceService">
+    <wsdl:port name="RtsTransService" binding="impl:RtsTransServiceSoapBinding">
+      <wsdlsoap:address location="http://wt-rts-ts1:8583/RTSPOSProject/services/RtsTransService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

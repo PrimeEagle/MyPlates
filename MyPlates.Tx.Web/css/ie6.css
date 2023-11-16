@@ -1,0 +1,67 @@
+/* forms
+******************************************************************/
+.disabled {
+	filter: alpha(opacity=40); 	
+}
+
+/* main
+******************************************************************/
+#main {
+	zoom: 1;
+	height: 400px;
+	overflow: visible; /* because 'height' is supposed to behave like 'min-height', but it isn't for some reason */
+}
+
+/* content
+******************************************************************/
+.spine-right {
+	height: 250px;
+}
+
+/* section nav
+******************************************************************/
+ul#secnav {
+	height: 411px;
+}
+
+/* footer
+******************************************************************/
+#footer {
+	background-color: #fff; /* because background image wasn't showing otherwise */
+}
+
+/* boxes, containers
+******************************************************************/
+.container {
+	zoom: 1;
+}
+
+										/* PAGE-SPECIFIC CSS */
+
+/* home
+******************************************************************/
+.home #main {
+	height: 205px;
+}
+
+/* cart
+******************************************************************/
+#cart .item {
+	zoom: 1;
+}
+.cart #cart .item {
+	margin-bottom: 12px;
+}
+.section-1 #checkout div div {
+	display: inline;
+}
+/* absolute bottom positioned button was 'sticking' during animation, so changed to relative positioning */
+#checkout button.next {
+	margin-bottom: -25px;
+	position: relative;
+	top: -30px;
+	left: 337px;
+}
+#checkout p.prev_address label {
+	cursor: default;
+}

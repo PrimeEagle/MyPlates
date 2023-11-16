@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns3="http://data.adm.webservices.rts.isd.txdot.com" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns2="http://data.common.webservices.rts.isd.txdot.com" xmlns:impl="http://adm.webservices.rts.isd.txdot.com" xmlns:tns4="http://util.services.rts.isd.txdot.com" xmlns:intf="http://adm.webservices.rts.isd.txdot.com" targetNamespace="http://adm.webservices.rts.isd.txdot.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:impl="http://adm.webservices.rts.isd.txdot.com" elementFormDefault="qualified" targetNamespace="http://data.common.webservices.rts.isd.txdot.com">
+      <xsd:complexType name="RtsDefaultRequest">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns2:RtsAbstractRequest">
+            <xsd:sequence />
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="RtsAbstractRequest" abstract="true">
+        <xsd:sequence>
+          <xsd:element name="action" type="xsd:int" />
+          <xsd:element name="caller" nillable="true" type="xsd:string" />
+          <xsd:element name="sessionId" nillable="true" type="xsd:string" />
+          <xsd:element name="versionNo" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="RtsAbstractResponse" abstract="true">
+        <xsd:sequence>
+          <xsd:element name="errMsgDesc" nillable="true" type="xsd:string" />
+          <xsd:element name="errMsgNo" type="xsd:int" />
+          <xsd:element name="versionNo" type="xsd:int" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="RtsAddress">
+        <xsd:sequence>
+          <xsd:element name="city" nillable="true" type="xsd:string" />
+          <xsd:element name="state" nillable="true" type="xsd:string" />
+          <xsd:element name="streetLine1" nillable="true" type="xsd:string" />
+          <xsd:element name="streetLine2" nillable="true" type="xsd:string" />
+          <xsd:element name="zip" nillable="true" type="xsd:string" />
+          <xsd:element name="zipP4" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:impl="http://adm.webservices.rts.isd.txdot.com" elementFormDefault="qualified" targetNamespace="http://adm.webservices.rts.isd.txdot.com">
+      <xsd:import namespace="http://data.adm.webservices.rts.isd.txdot.com" />
+      <xsd:import namespace="http://data.common.webservices.rts.isd.txdot.com" />
+      <xsd:element name="getCountyInfo">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="aarrRequest" type="tns2:RtsDefaultRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getCountyInfoResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="getCountyInfoReturn" type="tns3:RtsOfficeIdResponse" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getPltTypes">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="aarrRequest" type="tns2:RtsDefaultRequest" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="getPltTypesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="getPltTypesReturn" type="tns3:RtsPlateTypeResponse" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:impl="http://adm.webservices.rts.isd.txdot.com" elementFormDefault="qualified" targetNamespace="http://data.adm.webservices.rts.isd.txdot.com">
+      <xsd:import namespace="http://util.services.rts.isd.txdot.com" />
+      <xsd:import namespace="http://data.common.webservices.rts.isd.txdot.com" />
+      <xsd:complexType name="RtsOfficeIdResponse">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns2:RtsAbstractResponse">
+            <xsd:sequence>
+              <xsd:element maxOccurs="unbounded" name="officeData" nillable="true" type="tns3:RtsOfficeIdsData" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="RtsOfficeIdsData">
+        <xsd:sequence>
+          <xsd:element name="number" type="xsd:int" />
+          <xsd:element name="countyName" nillable="true" type="xsd:string" />
+          <xsd:element name="emailAddress" nillable="true" type="xsd:string" />
+          <xsd:element name="phoneNumber" nillable="true" type="xsd:string" />
+          <xsd:element name="tacName" nillable="true" type="xsd:string" />
+          <xsd:element name="mailingAddress" nillable="true" type="tns2:RtsAddress" />
+          <xsd:element name="physicalAddress" nillable="true" type="tns2:RtsAddress" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="RtsPlateTypeResponse">
+        <xsd:complexContent mixed="false">
+          <xsd:extension base="tns2:RtsAbstractResponse">
+            <xsd:sequence>
+              <xsd:element maxOccurs="unbounded" name="plateTypeData" nillable="true" type="tns3:RtsPlateTypeData" />
+            </xsd:sequence>
+          </xsd:extension>
+        </xsd:complexContent>
+      </xsd:complexType>
+      <xsd:complexType name="RtsPlateTypeData">
+        <xsd:sequence>
+          <xsd:element name="addlSetApplFee" nillable="true" type="tns4:Dollar" />
+          <xsd:element name="addlSetRenwlFee" nillable="true" type="tns4:Dollar" />
+          <xsd:element name="firstSetApplFee" nillable="true" type="tns4:Dollar" />
+          <xsd:element name="firstSetRenwlFee" nillable="true" type="tns4:Dollar" />
+          <xsd:element name="PLPFee" nillable="true" type="tns4:Dollar" />
+          <xsd:element name="remakeFee" nillable="true" type="tns4:Dollar" />
+          <xsd:element name="replFee" nillable="true" type="tns4:Dollar" />
+          <xsd:element name="annualPltIndi" type="xsd:int" />
+          <xsd:element name="duplsAllowdCd" type="xsd:int" />
+          <xsd:element name="mandPltReplAge" type="xsd:int" />
+          <xsd:element name="maxByteCount" type="xsd:int" />
+          <xsd:element name="mfgProcsCd" type="xsd:int" />
+          <xsd:element name="optPltReplAge" type="xsd:int" />
+          <xsd:element name="pltSetImprtnceCd" type="xsd:int" />
+          <xsd:element name="pltSurchargeIndi" type="xsd:int" />
+          <xsd:element name="regRenwlCd" type="xsd:int" />
+          <xsd:element name="RTSEffDate" type="xsd:int" />
+          <xsd:element name="RTSEffEndDate" type="xsd:int" />
+          <xsd:element name="spclPrortnIncrmnt" type="xsd:int" />
+          <xsd:element name="userPltNoIndi" type="xsd:int" />
+          <xsd:element name="baseRegPltCd" nillable="true" type="xsd:string" />
+          <xsd:element name="dispPltGrpId" nillable="true" type="xsd:string" />
+          <xsd:element name="ISAAllowdCd" nillable="true" type="xsd:string" />
+          <xsd:element name="limitedPltGrpId" nillable="true" type="xsd:string" />
+          <xsd:element name="locCntyAuthCd" nillable="true" type="xsd:string" />
+          <xsd:element name="locHQAuthCd" nillable="true" type="xsd:string" />
+          <xsd:element name="locInetAuthCd" nillable="true" type="xsd:string" />
+          <xsd:element name="locRegionAuthCd" nillable="true" type="xsd:string" />
+          <xsd:element name="needsProgramCd" nillable="true" type="xsd:string" />
+          <xsd:element name="PLPAcctItmCd" nillable="true" type="xsd:string" />
+          <xsd:element name="pltOwnrshpCd" nillable="true" type="xsd:string" />
+          <xsd:element name="regPltCd" nillable="true" type="xsd:string" />
+          <xsd:element name="regPltDesign" nillable="true" type="xsd:string" />
+          <xsd:element name="renwlRtrnAddrCd" nillable="true" type="xsd:string" />
+          <xsd:element name="shpngAddrCd" nillable="true" type="xsd:string" />
+          <xsd:element name="spclPltType" nillable="true" type="xsd:string" />
+          <xsd:element name="trnsfrCd" nillable="true" type="xsd:string" />
+          <xsd:element name="regPltCdDesc" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:impl="http://adm.webservices.rts.isd.txdot.com" elementFormDefault="qualified" targetNamespace="http://util.services.rts.isd.txdot.com">
+      <xsd:complexType name="Dollar">
+        <xsd:sequence>
+          <xsd:element name="value" nillable="true" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="getPltTypesRequest">
+    <wsdl:part name="parameters" element="intf:getPltTypes" />
+  </wsdl:message>
+  <wsdl:message name="getPltTypesResponse">
+    <wsdl:part name="parameters" element="intf:getPltTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCountyInfoResponse">
+    <wsdl:part name="parameters" element="intf:getCountyInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getCountyInfoRequest">
+    <wsdl:part name="parameters" element="intf:getCountyInfo" />
+  </wsdl:message>
+  <wsdl:portType name="RtsAdmService">
+    <wsdl:operation name="getCountyInfo">
+      <wsdl:input name="getCountyInfoRequest" message="intf:getCountyInfoRequest" />
+      <wsdl:output name="getCountyInfoResponse" message="intf:getCountyInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="getPltTypes">
+      <wsdl:input name="getPltTypesRequest" message="intf:getPltTypesRequest" />
+      <wsdl:output name="getPltTypesResponse" message="intf:getPltTypesResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RtsAdmServiceSoapBinding" type="intf:RtsAdmService">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getCountyInfo">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getCountyInfoRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getCountyInfoResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPltTypes">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="getPltTypesRequest">
+        <wsdlsoap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getPltTypesResponse">
+        <wsdlsoap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RtsAdmServiceService">
+    <wsdl:port name="RtsAdmService" binding="intf:RtsAdmServiceSoapBinding">
+      <wsdlsoap:address location="http://wt-rts-ts1:8583/RTSPOSProject/services/RtsAdmService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

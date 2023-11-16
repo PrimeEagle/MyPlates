@@ -1,0 +1,676 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{20978C1E-11A1-44E2-9DE0-B4151CF30F69}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyPlates.Tx.Web</RootNamespace>
+    <AssemblyName>MyPlates.Tx.Web</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="404.aspx" />
+    <Content Include="404.html" />
+    <Content Include="About.aspx" />
+    <Content Include="Admin\admin-secnav.htm" />
+    <Content Include="Admin\CreateUser.aspx" />
+    <Content Include="Admin\Default.aspx" />
+    <Content Include="Cart.aspx" />
+    <Content Include="CartFailure.aspx" />
+    <Content Include="CartSuccess.aspx" />
+    <Content Include="Charity.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Contact_Success.aspx" />
+    <Content Include="CreateAPlate.aspx" />
+    <Content Include="iframe_termsandconditions.html" />
+    <Content Include="img\plate_custom_3.png" />
+    <Content Include="Maintenance.html" />
+    <Content Include="Tools\CountyAddressExport.aspx" />
+    <Content Include="CSR\CountyInformation.aspx" />
+    <Content Include="CSR\csr-secnav.htm" />
+    <Content Include="CSR\LogObjectionableText.aspx" />
+    <Content Include="CSR\PlatesByDateRange.aspx" />
+    <Content Include="CSR\Search.aspx" />
+    <Content Include="CSR\Default.aspx" />
+    <Content Include="CSR\OrderDetail.aspx" />
+    <Content Include="CSR\ViewReceipt.aspx" />
+    <Content Include="css\ie6.css" />
+    <Content Include="css\ie7.css" />
+    <Content Include="css\reset.css" />
+    <Content Include="css\styles.css" />
+    <Content Include="css\_notes\dwsync.xml" />
+    <Content Include="CurrentNews.htm" />
+    <Content Include="Default.aspx" />
+    <Content Include="Disabled.aspx" />
+    <Content Include="Error.aspx" />
+    <Content Include="Espanol.aspx" />
+    <Content Include="Faq.aspx" />
+    <Content Include="flash\createaplate.swf" />
+    <Content Include="flash\expressInstall.swf" />
+    <Content Include="flash\plateview.swf" />
+    <Content Include="flash\_notes\dwsync.xml" />
+    <Content Include="How.aspx" />
+    <Content Include="img\banner.jpg" />
+    <Content Include="img\banner_big.jpg" />
+    <Content Include="img\banner_big_overlay.png" />
+    <Content Include="img\body_bg.png" />
+    <Content Include="img\box_billing.png" />
+    <Content Include="img\box_confirm.png" />
+    <Content Include="img\box_headquarters.png" />
+    <Content Include="img\box_home_news.png" />
+    <Content Include="img\box_news.png" />
+    <Content Include="img\box_payment.png" />
+    <Content Include="img\box_summary.png" />
+    <Content Include="img\box_top_faq.png" />
+    <Content Include="img\box_welcome.png" />
+    <Content Include="img\box_your_cart.png" />
+    <Content Include="img\btn_continue_shop.png" />
+    <Content Include="img\btn_create.png" />
+    <Content Include="img\btn_next.png" />
+    <Content Include="img\btn_place_order.png" />
+    <Content Include="img\btn_redeem_cert.png" />
+    <Content Include="img\btn_submit.png" />
+    <Content Include="img\bullet_link.png" />
+    <Content Include="img\cvv_ae.png" />
+    <Content Include="img\cvv_visa.png" />
+    <Content Include="img\footer.png" />
+    <Content Include="img\header.png" />
+    <Content Include="img\ico_disabled.png" />
+    <Content Include="img\main_bg.png" />
+    <Content Include="img\main_bg_short.png" />
+    <Content Include="img\mplate_custom_1.png" />
+    <Content Include="img\mplate_custom_2.png" />
+    <Content Include="img\mplate_luxury_1.png" />
+    <Content Include="img\mplate_luxury_2.png" />
+    <Content Include="img\mplate_premium_1.png" />
+    <Content Include="img\myplates.jpg" />
+    <Content Include="img\nav_about.png" />
+    <Content Include="img\nav_charity.png" />
+    <Content Include="img\nav_contact.png" />
+    <Content Include="img\nav_create.png" />
+    <Content Include="img\nav_how.png" />
+    <Content Include="img\options_table_hdr.png" />
+    <Content Include="img\options_table_leftcol.png" />
+    <Content Include="img\plate_custom_1.png" />
+    <Content Include="img\plate_custom_2.png" />
+    <Content Include="img\plate_luxury_1.png" />
+    <Content Include="img\plate_luxury_2.png" />
+    <Content Include="img\plate_luxury_3.png" />
+    <Content Include="img\plate_premium_1.png" />
+    <Content Include="img\plate_premium_2.png" />
+    <Content Include="img\plate_premium_3.png" />
+    <Content Include="img\pop_cvv.png" />
+    <Content Include="img\pop_safeguard.png" />
+    <Content Include="img\prev_address.png" />
+    <Content Include="img\progress_1.png" />
+    <Content Include="img\progress_2.png" />
+    <Content Include="img\progress_3.png" />
+    <Content Include="img\progress_4.png" />
+    <Content Include="img\progress_checkout.png" />
+    <Content Include="img\secnav.png" />
+    <Content Include="img\secnav_.png" />
+    <Content Include="img\secnav_about.png" />
+    <Content Include="img\secnav_contact.png" />
+    <Content Include="img\secnav_existing.png" />
+    <Content Include="img\secnav_faq.png" />
+    <Content Include="img\secnav_how.png" />
+    <Content Include="img\secnav_media.png" />
+    <Content Include="img\secnav_news.png" />
+    <Content Include="img\secnav_options.png" />
+    <Content Include="img\secnav_press.png" />
+    <Content Include="img\tdt_logo.png" />
+    <Content Include="img\temp_home.png" />
+    <Content Include="img\temp_plate1.png" />
+    <Content Include="img\temp_plate2.png" />
+    <Content Include="img\topnav_cart.png" />
+    <Content Include="img\topnav_disabled.png" />
+    <Content Include="img\topnav_espanol.png" />
+    <Content Include="img\topnav_gift.png" />
+    <Content Include="img\txdot_logo.png" />
+    <Content Include="img\txt_create_plate.png" />
+    <Content Include="img\txt_need_assistance.png" />
+    <Content Include="img\_notes\dwsync.xml" />
+    <Content Include="CSR\ISAOrder.aspx" />
+    <Content Include="inc\about-secnav.htm" />
+    <Content Include="inc\contact-secnav.htm" />
+    <Content Include="inc\footer.htm" />
+    <Content Include="inc\Header.ascx" />
+    <Content Include="inc\HeaderNoBanner.ascx" />
+    <Content Include="inc\how-secnav.htm" />
+    <Content Include="js\jquery-1.2.3.pack.js" />
+    <Content Include="js\jquery.simplemodal.js" />
+    <Content Include="js\renewholdforplates.js" />
+    <Content Include="js\scripts.js" />
+    <Content Include="js\swfobject.js" />
+    <Content Include="js\_notes\dwsync.xml" />
+    <Content Include="Login.aspx" />
+    <Content Include="Media.aspx" />
+    <Content Include="News.aspx" />
+    <Content Include="News_article.aspx" />
+    <Content Include="Options.aspx" />
+    <Content Include="Press.aspx" />
+    <Content Include="Privacy.aspx" />
+    <Content Include="Sitemap.aspx" />
+    <Content Include="Terms.aspx" />
+    <Content Include="TestUI.aspx" />
+    <Content Include="TestUIAddPlateToCart.aspx" />
+    <Content Include="TestUICancelPlateHold.aspx" />
+    <Content Include="TestUIGetCountyInfo.aspx" />
+    <Content Include="TestUIOrderPlate.aspx" />
+    <Content Include="TestUIRenewPlateHold.aspx" />
+    <Content Include="TestUISendPayment.aspx" />
+    <Content Include="TestUIViewOrderReceipt.aspx" />
+    <Content Include="thawte.aspx" />
+    <Content Include="UIAddPlateImage.aspx" />
+    <Content Include="UIAddPlateToCart.aspx" />
+    <Content Include="UICheckAvailability.aspx" />
+    <Content Include="TestUICheckAvailability.aspx" />
+    <Content Include="UIDisplayPlateImage.aspx" />
+    <Content Include="UIGetCountyInfo.aspx" />
+    <Content Include="UIPopulate.aspx" />
+    <Content Include="UIRenewPlateHold.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="xslt\EmailConfirmation.xslt" />
+    <Content Include="xslt\PopulateFlash.xslt" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\CreateUser.aspx.cs">
+      <DependentUpon>CreateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\CreateUser.aspx.designer.cs">
+      <DependentUpon>CreateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CartFailure.aspx.cs">
+      <DependentUpon>CartFailure.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CartFailure.aspx.designer.cs">
+      <DependentUpon>CartFailure.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CartSuccess.aspx.cs">
+      <DependentUpon>CartSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CartSuccess.aspx.designer.cs">
+      <DependentUpon>CartSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Charity.aspx.cs">
+      <DependentUpon>Charity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Charity.aspx.designer.cs">
+      <DependentUpon>Charity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact_Success.aspx.cs">
+      <DependentUpon>Contact_Success.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact_Success.aspx.designer.cs">
+      <DependentUpon>Contact_Success.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateAPlate.aspx.cs">
+      <DependentUpon>CreateAPlate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateAPlate.aspx.designer.cs">
+      <DependentUpon>CreateAPlate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\CountyAddressExport.aspx.cs">
+      <DependentUpon>CountyAddressExport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tools\CountyAddressExport.aspx.designer.cs">
+      <DependentUpon>CountyAddressExport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CSR\CountyInformation.aspx.cs">
+      <DependentUpon>CountyInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CSR\CountyInformation.aspx.designer.cs">
+      <DependentUpon>CountyInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CSR\LogObjectionableText.aspx.cs">
+      <DependentUpon>LogObjectionableText.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CSR\LogObjectionableText.aspx.designer.cs">
+      <DependentUpon>LogObjectionableText.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CSR\PlatesByDateRange.aspx.cs">
+      <DependentUpon>PlatesByDateRange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CSR\PlatesByDateRange.aspx.designer.cs">
+      <DependentUpon>PlatesByDateRange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CSR\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CSR\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CSR\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CSR\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CSR\OrderDetail.aspx.cs">
+      <DependentUpon>OrderDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CSR\OrderDetail.aspx.designer.cs">
+      <DependentUpon>OrderDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CSR\ViewReceipt.aspx.cs">
+      <DependentUpon>ViewReceipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CSR\ViewReceipt.aspx.designer.cs">
+      <DependentUpon>ViewReceipt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CSR\ISAOrder.aspx.cs">
+      <DependentUpon>ISAOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CSR\ISAOrder.aspx.designer.cs">
+      <DependentUpon>ISAOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Disabled.aspx.cs">
+      <DependentUpon>Disabled.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Disabled.aspx.designer.cs">
+      <DependentUpon>Disabled.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Espanol.aspx.cs">
+      <DependentUpon>Espanol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Espanol.aspx.designer.cs">
+      <DependentUpon>Espanol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Faq.aspx.cs">
+      <DependentUpon>Faq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Faq.aspx.designer.cs">
+      <DependentUpon>Faq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="How.aspx.cs">
+      <DependentUpon>How.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="How.aspx.designer.cs">
+      <DependentUpon>How.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="inc\Header.ascx.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inc\Header.ascx.designer.cs">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="inc\HeaderNoBanner.ascx.cs">
+      <DependentUpon>HeaderNoBanner.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="inc\HeaderNoBanner.ascx.designer.cs">
+      <DependentUpon>HeaderNoBanner.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Media.aspx.cs">
+      <DependentUpon>Media.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Media.aspx.designer.cs">
+      <DependentUpon>Media.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="News_article.aspx.cs">
+      <DependentUpon>News_article.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="News_article.aspx.designer.cs">
+      <DependentUpon>News_article.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Options.aspx.cs">
+      <DependentUpon>Options.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Options.aspx.designer.cs">
+      <DependentUpon>Options.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Press.aspx.cs">
+      <DependentUpon>Press.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Press.aspx.designer.cs">
+      <DependentUpon>Press.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Privacy.aspx.cs">
+      <DependentUpon>Privacy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Privacy.aspx.designer.cs">
+      <DependentUpon>Privacy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitemap.aspx.cs">
+      <DependentUpon>Sitemap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitemap.aspx.designer.cs">
+      <DependentUpon>Sitemap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Terms.aspx.cs">
+      <DependentUpon>Terms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Terms.aspx.designer.cs">
+      <DependentUpon>Terms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestUI.aspx.cs">
+      <DependentUpon>TestUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestUI.aspx.designer.cs">
+      <DependentUpon>TestUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestUIAddPlateToCart.aspx.cs">
+      <DependentUpon>TestUIAddPlateToCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestUIAddPlateToCart.aspx.designer.cs">
+      <DependentUpon>TestUIAddPlateToCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestUICancelPlateHold.aspx.cs">
+      <DependentUpon>TestUICancelPlateHold.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestUICancelPlateHold.aspx.designer.cs">
+      <DependentUpon>TestUICancelPlateHold.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestUIGetCountyInfo.aspx.cs">
+      <DependentUpon>TestUIGetCountyInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestUIGetCountyInfo.aspx.designer.cs">
+      <DependentUpon>TestUIGetCountyInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestUIOrderPlate.aspx.cs">
+      <DependentUpon>TestUIOrderPlate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestUIOrderPlate.aspx.designer.cs">
+      <DependentUpon>TestUIOrderPlate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestUIRenewPlateHold.aspx.cs">
+      <DependentUpon>TestUIRenewPlateHold.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestUIRenewPlateHold.aspx.designer.cs">
+      <DependentUpon>TestUIRenewPlateHold.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestUISendPayment.aspx.cs">
+      <DependentUpon>TestUISendPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestUISendPayment.aspx.designer.cs">
+      <DependentUpon>TestUISendPayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestUIViewOrderReceipt.aspx.cs">
+      <DependentUpon>TestUIViewOrderReceipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestUIViewOrderReceipt.aspx.designer.cs">
+      <DependentUpon>TestUIViewOrderReceipt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="thawte.aspx.cs">
+      <DependentUpon>thawte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="thawte.aspx.designer.cs">
+      <DependentUpon>thawte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UIAddPlateImage.aspx.cs">
+      <DependentUpon>UIAddPlateImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UIAddPlateImage.aspx.designer.cs">
+      <DependentUpon>UIAddPlateImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UIAddPlateToCart.aspx.cs">
+      <DependentUpon>UIAddPlateToCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UIAddPlateToCart.aspx.designer.cs">
+      <DependentUpon>UIAddPlateToCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UICheckAvailability.aspx.cs">
+      <DependentUpon>UICheckAvailability.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UICheckAvailability.aspx.designer.cs">
+      <DependentUpon>UICheckAvailability.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestUICheckAvailability.aspx.cs">
+      <DependentUpon>TestUICheckAvailability.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestUICheckAvailability.aspx.designer.cs">
+      <DependentUpon>TestUICheckAvailability.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UIDisplayPlateImage.aspx.cs">
+      <DependentUpon>UIDisplayPlateImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UIDisplayPlateImage.aspx.designer.cs">
+      <DependentUpon>UIDisplayPlateImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UIGetCountyInfo.aspx.cs">
+      <DependentUpon>UIGetCountyInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UIGetCountyInfo.aspx.designer.cs">
+      <DependentUpon>UIGetCountyInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UIPopulate.aspx.cs">
+      <DependentUpon>UIPopulate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UIPopulate.aspx.designer.cs">
+      <DependentUpon>UIPopulate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UIRenewPlateHold.aspx.cs">
+      <DependentUpon>UIRenewPlateHold.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UIRenewPlateHold.aspx.designer.cs">
+      <DependentUpon>UIRenewPlateHold.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyPlates.Tx.Carts\MyPlates.Tx.Carts.csproj">
+      <Project>{7B1AA959-7201-460D-BB6C-062C7A8B8DD8}</Project>
+      <Name>MyPlates.Tx.Carts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyPlates.Tx.Configuration\MyPlates.Tx.Configuration.csproj">
+      <Project>{59FEA10D-87C5-4CE2-9909-D633FEE360AB}</Project>
+      <Name>MyPlates.Tx.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyPlates.Tx.Data\MyPlates.Tx.Data.csproj">
+      <Project>{29788B25-FE75-4436-8E30-E32A2BC9B989}</Project>
+      <Name>MyPlates.Tx.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyPlates.Tx.ePay\MyPlates.Tx.ePay.csproj">
+      <Project>{4FA722AE-D44D-41EA-9C52-FD2D819F8032}</Project>
+      <Name>MyPlates.Tx.ePay</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyPlates.Tx.Helper\MyPlates.Tx.Helper.csproj">
+      <Project>{E5DDE719-49BB-4B48-BC52-79ABF91BC802}</Project>
+      <Name>MyPlates.Tx.Helper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyPlates.Tx.Reporting\MyPlates.Tx.Reporting.csproj">
+      <Project>{E253F78D-BFB6-4682-854A-D8680FBF95AC}</Project>
+      <Name>MyPlates.Tx.Reporting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TxDot.Web.Services\TxDot.Web.Services.csproj">
+      <Project>{6D525E1E-8C01-4398-A03F-E1309837160E}</Project>
+      <Name>TxDot.Web.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="inc\_notes\" />
+    <Folder Include="Media\Commercials\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4867</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

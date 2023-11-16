@@ -1,0 +1,108 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ePay.Web.Services", "ePay.Web.Services\ePay.Web.Services.csproj", "{4D39AE34-8034-4773-82D3-0A0EB8874EE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPlates.Tx.Carts", "MyPlates.Tx.Carts\MyPlates.Tx.Carts.csproj", "{7B1AA959-7201-460D-BB6C-062C7A8B8DD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPlates.Tx.Configuration", "MyPlates.Tx.Configuration\MyPlates.Tx.Configuration.csproj", "{59FEA10D-87C5-4CE2-9909-D633FEE360AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPlates.Tx.Data", "MyPlates.Tx.Data\MyPlates.Tx.Data.csproj", "{29788B25-FE75-4436-8E30-E32A2BC9B989}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPlates.Tx.ePay", "MyPlates.Tx.ePay\MyPlates.Tx.ePay.csproj", "{4FA722AE-D44D-41EA-9C52-FD2D819F8032}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPlates.Tx.Web", "MyPlates.Tx.Web\MyPlates.Tx.Web.csproj", "{20978C1E-11A1-44E2-9DE0-B4151CF30F69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPlates.Tx.Web.Services", "MyPlates.Tx.Web.Services\MyPlates.Tx.Web.Services.csproj", "{29A4A246-2A68-4C48-BB68-95F8FC0ED381}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TxDot.Web.Services", "TxDot.Web.Services\TxDot.Web.Services.csproj", "{6D525E1E-8C01-4398-A03F-E1309837160E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPlates.Tx.Reporting", "MyPlates.Tx.Reporting\MyPlates.Tx.Reporting.csproj", "{E253F78D-BFB6-4682-854A-D8680FBF95AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyPlates.Tx.Helper", "MyPlates.Tx.Helper\MyPlates.Tx.Helper.csproj", "{E5DDE719-49BB-4B48-BC52-79ABF91BC802}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 11
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ePay.Web.Services\\ePay.Web.Services.csproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = ePay.Web.Services\\
+		SccProjectUniqueName2 = MyPlates.Tx.Carts\\MyPlates.Tx.Carts.csproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = MyPlates.Tx.Carts\\
+		SccProjectUniqueName3 = MyPlates.Tx.Configuration\\MyPlates.Tx.Configuration.csproj
+		SccLocalPath3 = .
+		SccProjectFilePathRelativizedFromConnection3 = MyPlates.Tx.Configuration\\
+		SccProjectUniqueName4 = MyPlates.Tx.Data\\MyPlates.Tx.Data.csproj
+		SccLocalPath4 = .
+		SccProjectFilePathRelativizedFromConnection4 = MyPlates.Tx.Data\\
+		SccProjectUniqueName5 = MyPlates.Tx.ePay\\MyPlates.Tx.ePay.csproj
+		SccLocalPath5 = .
+		SccProjectFilePathRelativizedFromConnection5 = MyPlates.Tx.ePay\\
+		SccProjectUniqueName6 = MyPlates.Tx.Web.Services\\MyPlates.Tx.Web.Services.csproj
+		SccLocalPath6 = .
+		SccProjectFilePathRelativizedFromConnection6 = MyPlates.Tx.Web.Services\\
+		SccProjectUniqueName7 = MyPlates.Tx.Web\\MyPlates.Tx.Web.csproj
+		SccLocalPath7 = .
+		SccProjectFilePathRelativizedFromConnection7 = MyPlates.Tx.Web\\
+		SccProjectUniqueName8 = TxDot.Web.Services\\TxDot.Web.Services.csproj
+		SccLocalPath8 = .
+		SccProjectFilePathRelativizedFromConnection8 = TxDot.Web.Services\\
+		SccProjectUniqueName9 = MyPlates.Tx.Reporting\\MyPlates.Tx.Reporting.csproj
+		SccLocalPath9 = .
+		SccProjectFilePathRelativizedFromConnection9 = MyPlates.Tx.Reporting\\
+		SccProjectUniqueName10 = MyPlates.Tx.Helper\\MyPlates.Tx.Helper.csproj
+		SccLocalPath10 = .
+		SccProjectFilePathRelativizedFromConnection10 = MyPlates.Tx.Helper\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D39AE34-8034-4773-82D3-0A0EB8874EE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D39AE34-8034-4773-82D3-0A0EB8874EE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D39AE34-8034-4773-82D3-0A0EB8874EE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D39AE34-8034-4773-82D3-0A0EB8874EE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B1AA959-7201-460D-BB6C-062C7A8B8DD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B1AA959-7201-460D-BB6C-062C7A8B8DD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B1AA959-7201-460D-BB6C-062C7A8B8DD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B1AA959-7201-460D-BB6C-062C7A8B8DD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59FEA10D-87C5-4CE2-9909-D633FEE360AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59FEA10D-87C5-4CE2-9909-D633FEE360AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59FEA10D-87C5-4CE2-9909-D633FEE360AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59FEA10D-87C5-4CE2-9909-D633FEE360AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29788B25-FE75-4436-8E30-E32A2BC9B989}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29788B25-FE75-4436-8E30-E32A2BC9B989}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29788B25-FE75-4436-8E30-E32A2BC9B989}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29788B25-FE75-4436-8E30-E32A2BC9B989}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FA722AE-D44D-41EA-9C52-FD2D819F8032}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FA722AE-D44D-41EA-9C52-FD2D819F8032}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FA722AE-D44D-41EA-9C52-FD2D819F8032}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FA722AE-D44D-41EA-9C52-FD2D819F8032}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20978C1E-11A1-44E2-9DE0-B4151CF30F69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20978C1E-11A1-44E2-9DE0-B4151CF30F69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20978C1E-11A1-44E2-9DE0-B4151CF30F69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20978C1E-11A1-44E2-9DE0-B4151CF30F69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29A4A246-2A68-4C48-BB68-95F8FC0ED381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29A4A246-2A68-4C48-BB68-95F8FC0ED381}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29A4A246-2A68-4C48-BB68-95F8FC0ED381}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29A4A246-2A68-4C48-BB68-95F8FC0ED381}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D525E1E-8C01-4398-A03F-E1309837160E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D525E1E-8C01-4398-A03F-E1309837160E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D525E1E-8C01-4398-A03F-E1309837160E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D525E1E-8C01-4398-A03F-E1309837160E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E253F78D-BFB6-4682-854A-D8680FBF95AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E253F78D-BFB6-4682-854A-D8680FBF95AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E253F78D-BFB6-4682-854A-D8680FBF95AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E253F78D-BFB6-4682-854A-D8680FBF95AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5DDE719-49BB-4B48-BC52-79ABF91BC802}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5DDE719-49BB-4B48-BC52-79ABF91BC802}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5DDE719-49BB-4B48-BC52-79ABF91BC802}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5DDE719-49BB-4B48-BC52-79ABF91BC802}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TxDot.Web.Services.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MyPlates_Tx_TxDot_WebServices_Proxy_RtsAdmService_RtsAdmServiceService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://wt-rts-ts1:8583/RTSPOSProject/services/RtsAdmService</Value>
+    </Setting>
+    <Setting Name="MyPlates_Tx_TxDot_WebServices_Proxy_RtsInvService_RtsInvServiceService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://wt-rts-ts1:8583/RTSPOSProject/services/RtsInvService</Value>
+    </Setting>
+    <Setting Name="MyPlates_Tx_TxDot_WebServices_Proxy_RtsTransService_RtsTransServiceService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://wt-rts-ts1:8583/RTSPOSProject/services/RtsTransService</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

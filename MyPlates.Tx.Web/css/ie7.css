@@ -1,0 +1,22 @@
+/* forms
+******************************************************************/
+.disabled {
+	filter: alpha(opacity=40); 	
+}
+
+/* footer
+******************************************************************/
+#footer {
+	background-color: #fff; /* because background image wasn't showing otherwise */
+}
+
+										/* PAGE-SPECIFIC CSS */
+
+/* cart
+******************************************************************/
+.cart #cart .item {
+	margin-bottom: 12px;
+}
+.section-1 #checkout div div {
+	display: inline;
+}
